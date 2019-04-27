@@ -1,10 +1,6 @@
-import { combineReducers } from 'redux';
-import citiesToFollow from './citiesToFollow';
-import detailsOfCityId from './detailsOfCityId';
- 
+import {combineReducers} from 'redux';
+
 const helloBookApp = combineReducers({
-  citiesToFollow,
-  detailsOfCityId: detailsOfCityId
 });
  
 export default helloBookApp;

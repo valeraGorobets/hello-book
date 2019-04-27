@@ -1,26 +1,23 @@
 import React, {Component} from 'react';
 import './styles.css'
 import Select from 'react-select';
-
-const bookOptions = [
-  { value: 'math', label: 'Math' },
-  { value: 'literature', label: 'Literature' },
-  { value: 'chemistry', label: 'Chemistry' }
-];
-
-const pageOptions = [
-  { value: '1', label: '1' },
-  { value: '2', label: '2' },
-  { value: '3', label: '3' },
-  { value: '4', label: '4' },
-  { value: '5', label: '5' },
-];
+import {getAvailableBooks, getAvailablePages} from "../../Services/BooksInfoService";
 
 export default class BookSelection extends Component {
   state = {
     selectedBookOption: null,
     selectedPageOption: null,
+    bookOptions: [],
+    pageOptions: [],
   };
+
+  componentDidMount() {
+    this.setState({
+      bookOptions: getAvailableBooks(),
+      pageOptions: getAvailablePages(),
+    })
+  }
+
   handleBookChange = (selectedBookOption) => {
     this.setState({ selectedBookOption });
   };
@@ -31,6 +28,10 @@ export default class BookSelection extends Component {
     console.log(this.state);
   };
 
+  getBookOptions = () => this.state.bookOptions;
+  getPageOptions = () => this.state.pageOptions;
+
+
   render() {
     const { selectedBookOption,  selectedPageOption} = this.state;
     return (
@@ -38,12 +39,12 @@ export default class BookSelection extends Component {
           <Select
               value={selectedBookOption}
               onChange={this.handleBookChange}
-              options={bookOptions}
+              options={this.getBookOptions()}
           />
           <Select
               value={selectedPageOption}
               onChange={this.handlePageChange}
-              options={pageOptions}
+              options={this.getPageOptions()}
           />
           <button onClick={this.onSubmitClick}>Go</button>
         </div>

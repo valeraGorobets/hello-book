@@ -1,0 +1,24 @@
+.container {
+  float:left;
+  width:100%;
+  min-height: calc(100vh - 135px);
+}
+.container > * {
+  padding: 5px;
+}
+aside {
+  float:left;
+  width:20%;
+  border: 1px solid #000;
+}
+
+section {
+  float:left;
+  /*width:60%;*/
+  border: 1px solid #000;
+}
+
+.analyticsData {
+  min-height: calc(100vh - 230px);
+  display: flex;
+}

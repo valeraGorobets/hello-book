@@ -1,0 +1,16 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: 10px;
+    padding: 10px;
+}
+
+.css-1pcexqc-container {
+    width: 100%;
+}
+
+button {
+    background-color: #03Dac5;
+    cursor: pointer;
+}

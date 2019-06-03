@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import './styles.css'
 import Select from 'react-select';
-import {getAvailableBooks, getAvailablePages} from "../../Services/BooksInfoService";
+import { getBookMapping } from "../../Services/BooksInfoService";
+import web3 from '../../web3';
 
 export default class BookSelection extends Component {
   state = {
+    bookMapping: [],
     selectedBookOption: null,
     selectedPageOption: null,
     bookOptions: [],
@@ -12,21 +14,57 @@ export default class BookSelection extends Component {
   };
 
   componentDidMount() {
+    const bookMapping = getBookMapping();
     this.setState({
-      bookOptions: getAvailableBooks(),
-      pageOptions: getAvailablePages(),
+      bookOptions: bookMapping.map(book => {
+        const {value, label} = book;
+        return {value, label};
+      }),
+      pageOptions: [],
+      bookMapping
     })
   }
 
-  handleBookChange = (selectedBookOption) => {
-    this.setState({ selectedBookOption });
+  extractPageOptions = (bookId) => {
+    return this.state.bookMapping
+        .find(book => book.value === bookId)
+        .content.map(item => {
+          return {
+            label: item.page.toString(),
+            value: item.page,
+          }
+        });
   };
+
+  handleBookChange = (selectedBookOption) => {
+    this.setState({
+      selectedBookOption,
+      pageOptions: this.extractPageOptions(selectedBookOption.value),
+      selectedPageOption: null,
+    });
+  };
+
   handlePageChange = (selectedPageOption) => {
     this.setState({ selectedPageOption });
   };
   onSubmitClick = () => {
-    console.log(this.state);
+    let selectedBook = this.state.bookMapping
+        .find(book => book.value === this.state.selectedBookOption.value);
+    const hash = selectedBook
+        .content
+        .find(item => item.page === this.state.selectedPageOption.value)
+        .hash;
+
+    this.props.onBookSelected(hash);
+    this.sendFeeToAuthor(selectedBook.authorWallet, selectedBook.feeAmount);
   };
+
+  sendFeeToAuthor(authorWalletAddress, feeAmount) {
+    web3.eth.sendTransaction({
+      to: authorWalletAddress,
+      from: this.props.clientWalletAddress,
+      value: web3.utils.toWei(feeAmount.toString(), 'ether')})
+  }
 
   getBookOptions = () => this.state.bookOptions;
   getPageOptions = () => this.state.pageOptions;
@@ -46,7 +84,7 @@ export default class BookSelection extends Component {
               onChange={this.handlePageChange}
               options={this.getPageOptions()}
           />
-          <button onClick={this.onSubmitClick}>Go</button>
+          <button onClick={this.onSubmitClick} disabled={!this.state.selectedBookOption || !this.state.selectedPageOption}>Go</button>
         </div>
     );
   }

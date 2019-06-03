@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './styles.css'
 import Select from 'react-select';
 import { getBookMapping } from "../../Services/BooksInfoService";
-import web3 from '../../web3';
+import web3 from '../../Utils/web3';
 
 export default class BookSelection extends Component {
   state = {

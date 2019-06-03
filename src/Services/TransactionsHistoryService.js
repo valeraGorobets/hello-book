@@ -1,4 +1,4 @@
-import web3 from '../web3';
+import web3 from '../Utils/web3';
 
 export function getTransactionHistory(address) {
   const apiKey = '5VX4NARPMGGD22TB5MPI1I4MT244E482Y8';
@@ -16,7 +16,7 @@ function transformTransaction(obj) {
       from: obj.from,
       to: obj.to,
       hash: obj.hash,
-      timeStamp: new Date(obj.timeStamp * 1000).toUTCString(),
+      timeStamp: new Date(obj.timeStamp * 1000).toLocaleString(),
       value: web3.utils.fromWei(obj.value, 'ether'),
   }
 }

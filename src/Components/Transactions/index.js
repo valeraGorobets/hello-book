@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './styles.css'
-import web3 from '../../web3';
+import web3 from '../../Utils/web3';
 import { getTransactionHistory } from '../../Services/TransactionsHistoryService';
 
 export default class Transactions extends Component {

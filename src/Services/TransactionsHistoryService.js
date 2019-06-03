@@ -1,3 +1,5 @@
+import web3 from '../web3';
+
 export function getTransactionHistory(address) {
   const apiKey = '5VX4NARPMGGD22TB5MPI1I4MT244E482Y8';
   const url = `http://api-ropsten.etherscan.io/api?module=account&action=txlist&address=${address}&startblock=0&endblock=99999999&sort=asc&apikey=${apiKey}`;
@@ -15,6 +17,6 @@ function transformTransaction(obj) {
       to: obj.to,
       hash: obj.hash,
       timeStamp: new Date(obj.timeStamp * 1000).toUTCString(),
-      value: obj.value,
+      value: web3.utils.fromWei(obj.value, 'ether'),
   }
 }

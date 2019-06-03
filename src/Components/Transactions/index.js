@@ -1,33 +1,33 @@
 import React, {Component} from 'react';
 import './styles.css'
-// import web3 from '../../web3';
+import web3 from '../../web3';
 import { getTransactionHistory } from '../../Services/TransactionsHistoryService';
 
 export default class Transactions extends Component {
   state = {
-    balance: 10,
+    balance: 0,
     transactionHistory: [],
   };
   componentDidMount = async () => {
-    this.reloadTransactions();
-    // setInterval(this.reloadTransactions, 5000);
-    // const balance = await web3.eth.getBalance(this.props.clientWalletAddress);
-    // this.setState({
-    //     balance: web3.utils.fromWei(balance, 'ether')
-    // });
+    this.reloadAccountInfo();
+    setInterval(this.reloadAccountInfo, 5000);
   };
 
-  reloadTransactions = async () => {
+  reloadAccountInfo = async () => {
       const transactionHistory = await getTransactionHistory(this.props.clientWalletAddress);
+      const balance = await web3.eth.getBalance(this.props.clientWalletAddress);
       console.log(transactionHistory);
-      this.setState({transactionHistory});
+      this.setState({
+          balance: web3.utils.fromWei(balance, 'ether'),
+          transactionHistory,
+      });
   };
 
   render() {
     return (
         <div className="transactions">
             <div className="balance">
-                <h2>Balance: {this.state.balance} HBL</h2>
+                <h2>Balance: {this.state.balance} ETH</h2>
             </div>
             <div className="transactions-list">
                 {this.state.transactionHistory.map(transaction => (
@@ -37,7 +37,7 @@ export default class Transactions extends Component {
                             <p>From : {transaction.from || "No address found"}</p>
                             <p>To : {transaction.to || "No address found"}</p>
                         </div>
-                        <p>{transaction.value}</p>
+                        <p>{transaction.value} ETH</p>
                     </div>
                 ))}
             </div>

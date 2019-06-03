@@ -26,16 +26,9 @@
 }
 
 .card p {
-    min-width: 200px;
+    min-width: 80px;
 }
 
 .card:hover {
    background: #f5f5f5;
-}
-
-.child {
-
-}
-.transactions-list {
-
 }

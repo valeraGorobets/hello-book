@@ -5,7 +5,7 @@ export function getTransactionHistory(address) {
       .then(res => res.json())
       .then(res => res.result)
       .then (res => res.map(transformTransaction))
-      .then (res => res.reverse().slice(0, 10))
+      .then (res => res.reverse().slice(0, 8))
 }
 
 function transformTransaction(obj) {

@@ -19,6 +19,5 @@ section {
 }
 
 .analyticsData {
-  height: calc(100vh - 230px);
   display: flex;
 }

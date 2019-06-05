@@ -26,10 +26,13 @@ export default class Transactions extends Component {
   render() {
     return (
         <div className="transactions">
-            <div className="balance">
-                <h2>Balance: {this.state.balance} HBL</h2>
-            </div>
+
             <div className="transactions-list">
+                <div className="card">
+                    <p>Time</p>
+                    <p>Transaction info</p>
+                    <p>Value</p>
+                </div>
                 {this.state.transactionHistory.map(transaction => (
                     <div className="card" key={transaction.hash}>
                         <p>{transaction.timeStamp}</p>

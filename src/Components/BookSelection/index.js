@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './styles.css'
 import Select from 'react-select';
 import { getBookMapping } from "../../Services/BooksInfoService";
-import web3 from '../../web3';
+// import web3 from '../../web3';
 
 export default class BookSelection extends Component {
   state = {
@@ -60,31 +60,40 @@ export default class BookSelection extends Component {
   };
 
   sendFeeToAuthor(authorWalletAddress, feeAmount) {
-    web3.eth.sendTransaction({
-      to: authorWalletAddress,
-      from: this.props.clientWalletAddress,
-      value: web3.utils.toWei(feeAmount.toString(), 'ether')})
+    // web3.eth.sendTransaction({
+    //   to: authorWalletAddress,
+    //   from: this.props.clientWalletAddress,
+    //   value: web3.utils.toWei(feeAmount.toString(), 'ether')})
   }
 
   getBookOptions = () => this.state.bookOptions;
   getPageOptions = () => this.state.pageOptions;
+  getSelectedBookFeeAmount = () => this.state.bookMapping
+      .find(book => book.value === this.state.selectedBookOption.value).feeAmount;
 
 
   render() {
     const { selectedBookOption,  selectedPageOption} = this.state;
     return (
-        <div className="wrapper">
-          <Select
-              value={selectedBookOption}
-              onChange={this.handleBookChange}
-              options={this.getBookOptions()}
-          />
-          <Select
-              value={selectedPageOption}
-              onChange={this.handlePageChange}
-              options={this.getPageOptions()}
-          />
-          <button onClick={this.onSubmitClick} disabled={!this.state.selectedBookOption || !this.state.selectedPageOption}>Go</button>
+        <div>
+            <h2>Select Book And Page:</h2>
+            <div className="wrapper">
+                <Select
+                    value={selectedBookOption}
+                    onChange={this.handleBookChange}
+                    options={this.getBookOptions()}
+                />
+                <Select
+                    value={selectedPageOption}
+                    onChange={this.handlePageChange}
+                    options={this.getPageOptions()}
+                />
+                {
+                    this.state.selectedBookOption && this.state.selectedPageOption ?
+                        <h2>Price: {this.getSelectedBookFeeAmount()} ETH</h2> : ''
+                }
+                <button onClick={this.onSubmitClick} disabled={!this.state.selectedBookOption || !this.state.selectedPageOption}>Go</button>
+            </div>
         </div>
     );
   }

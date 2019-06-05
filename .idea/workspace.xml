@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a35442c-77e5-4fd6-a212-e4ef97f4113c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/BookSelection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/BookSelection/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/BookSelection/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/BookSelection/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ContentView/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ContentView/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ContentView/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ContentView/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Main/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Transactions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Transactions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Transactions/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Transactions/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/TransactionsHistoryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/TransactionsHistoryService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/storehash.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/storehash.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/web3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/web3.js" afterDir="false" />
     </list>
@@ -44,25 +35,25 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="155" />
-          <entry key="js" value="789" />
+          <entry key="js" value="873" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="155" />
-          <entry key="JavaScript" value="789" />
+          <entry key="JavaScript" value="873" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="9" />
-          <entry key="js" value="5" />
+          <entry key="js" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="9" />
-          <entry key="JavaScript" value="5" />
+          <entry key="JavaScript" value="8" />
         </counts>
       </usages-collector>
     </session>
@@ -72,11 +63,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Main/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+            <state relative-caret-position="248">
+              <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Services/BigchindbService.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -84,20 +84,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/ContentView/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
+            <state relative-caret-position="-62">
               <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/ContentView/styles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -111,29 +102,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Header/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="1" column="18" lean-forward="true" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Components/Transactions/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Footer/styles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+            <state relative-caret-position="310">
+              <caret line="16" column="76" selection-end-line="54" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#96#178#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -147,7 +124,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Transactions/styles.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="93">
@@ -221,13 +198,15 @@
         <option value="$PROJECT_DIR$/src/Components/ContentView/index.js" />
         <option value="$PROJECT_DIR$/src/Components/BookSelection/index.js" />
         <option value="$PROJECT_DIR$/src/Components/BookSelection/styles.css" />
-        <option value="$PROJECT_DIR$/src/Components/Transactions/index.js" />
         <option value="$PROJECT_DIR$/src/Components/Header/index.js" />
         <option value="$PROJECT_DIR$/src/Components/Header/styles.css" />
         <option value="$PROJECT_DIR$/src/Services/TransactionsHistoryService.js" />
         <option value="$PROJECT_DIR$/src/Components/Main/styles.css" />
         <option value="$PROJECT_DIR$/src/Components/ContentView/styles.css" />
         <option value="$PROJECT_DIR$/src/Components/Transactions/styles.css" />
+        <option value="$PROJECT_DIR$/node_modules/bigchaindb-driver/dist/node/Ed25519Keypair.js" />
+        <option value="$PROJECT_DIR$/src/Services/BigchindbService.js" />
+        <option value="$PROJECT_DIR$/src/Components/Transactions/index.js" />
       </list>
     </option>
   </component>
@@ -277,6 +256,32 @@
             <path>
               <item name="hello-book" type="b2602c69:ProjectViewProjectNode" />
               <item name="hello-book" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-book" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-book" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="bigchaindb-driver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-book" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="bigchaindb-driver" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-book" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="bigchaindb-driver" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="node" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hello-book" type="b2602c69:ProjectViewProjectNode" />
@@ -358,12 +363,12 @@
       <workItem from="1559464923276" duration="16434000" />
       <workItem from="1559540631075" duration="3651000" />
       <workItem from="1559545598794" duration="19000" />
-      <workItem from="1559714059933" duration="2039000" />
+      <workItem from="1559714059933" duration="4541000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29278000" />
+    <option name="totallyTimeSpent" value="31780000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
@@ -371,11 +376,11 @@
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.17913593" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.17913593" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.3296582" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="2" weight="0.32897604" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
@@ -475,13 +480,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-start-column="3" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
@@ -523,7 +521,7 @@
     <entry file="file://$PROJECT_DIR$/src/Components/Header/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="31">
-          <caret line="1" column="18" lean-forward="true" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -534,17 +532,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Services/TransactionsHistoryService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Main/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="604">
           <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Transactions/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Services/TransactionsHistoryService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -555,9 +560,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/web3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bigchaindb-driver/dist/node/Ed25519Keypair.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Main/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/ContentView/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
+        <state relative-caret-position="-62">
           <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
@@ -565,27 +594,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Main/index.js">
+    <entry file="file://$PROJECT_DIR$/src/Services/BigchindbService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="186">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Transactions/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Transactions/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        <state relative-caret-position="310">
+          <caret line="16" column="76" selection-end-line="54" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#96#178#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

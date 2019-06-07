@@ -11,6 +11,13 @@
 }
 
 button {
-    background-color: #03Dac5;
+    background-color: #6200ee;
+    color: #fff;
     cursor: pointer;
+    font-size: 16px;
+    width: 200px;
+}
+
+button:disabled {
+    background-color: #9b999d;
 }

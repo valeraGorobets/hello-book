@@ -5,7 +5,7 @@ import { createStore } from 'redux';
 import { BrowserRouter } from 'react-router-dom';
 import helloBookApp from './Reducers';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './Utils/registerServiceWorker';
 
 let store = createStore(helloBookApp);
 

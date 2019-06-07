@@ -3,7 +3,6 @@ import './styles.css'
 import BookSelection from "../BookSelection";
 
 const IPFS_URL = 'https://gateway.ipfs.io/ipfs/';
-const Fake_IPFS_URL = 'https://bla/';
 
 export default class ContentView extends Component {
   state = {

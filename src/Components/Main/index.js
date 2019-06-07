@@ -7,21 +7,21 @@ import { BigchainDb } from '../../Services/BigchindbService';
 
 export default class Main extends Component {
   state = {
-    clientWalletAddress: '0xc9E4C7e8E2C9055492E3971dD380a359f4Ec4111',
     chart: {},
   };
 
   componentDidMount = async () => {
-      const bigchainDb = new BigchainDb();
-      const chart = await bigchainDb.getFromDb();
+      this.bigchainDb = new BigchainDb();
+      const chart = await this.bigchainDb.getFromDb();
       this.setState({chart});
   };
 
-  onSelected = (selectedBook) => {
+  onSelected = async (selectedBook) => {
     const chartCopy = this.state.chart;
     chartCopy[selectedBook.label]++;
+    const chart = await this.bigchainDb.sendToDb(chartCopy);
     this.setState({
-        chart: chartCopy,
+        chart,
     })
   };
 
@@ -30,10 +30,10 @@ export default class Main extends Component {
       <div className="container">
         <div className="analyticsData">
             <div className="verticalAlign">
-                <Transactions clientWalletAddress = {this.state.clientWalletAddress}/>
+                <Transactions clientWalletAddress = {this.props.clientWalletAddress}/>
                 <Chart chart = {this.state.chart}/>
             </div>
-            <ContentView clientWalletAddress = {this.state.clientWalletAddress} onBookSelected = {this.onSelected}/>
+            <ContentView clientWalletAddress = {this.props.clientWalletAddress} onBookSelected = {this.onSelected}/>
         </div>
       </div>
     );

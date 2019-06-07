@@ -1,17 +1,12 @@
 import React, {Component} from 'react';
-import './styles.css'
-import web3 from '../../Utils/web3';
+import './styles.css';
 import { getTransactionHistory } from '../../Services/TransactionsHistoryService';
 
 export default class Transactions extends Component {
   state = {
-    balance: 0,
     transactionHistory: [],
   };
-  constructor(props) {
-      super(props);
 
-  }
   componentDidMount = async () => {
     this.reloadAccountInfo();
     setInterval(this.reloadAccountInfo, 5000);
@@ -19,10 +14,7 @@ export default class Transactions extends Component {
 
   reloadAccountInfo = async () => {
       const transactionHistory = await getTransactionHistory(this.props.clientWalletAddress);
-      const balance = await web3.eth.getBalance(this.props.clientWalletAddress);
-      console.log(transactionHistory);
       this.setState({
-          balance: web3.utils.fromWei(balance, 'ether'),
           transactionHistory,
       });
   };

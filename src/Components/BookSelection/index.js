@@ -60,10 +60,10 @@ export default class BookSelection extends Component {
   };
 
   sendFeeToAuthor(authorWalletAddress, feeAmount) {
-    // web3.eth.sendTransaction({
-    //   to: authorWalletAddress,
-    //   from: this.props.clientWalletAddress,
-    //   value: web3.utils.toWei(feeAmount.toString(), 'ether')})
+    web3.eth.sendTransaction({
+      to: authorWalletAddress,
+      from: this.props.clientWalletAddress,
+      value: web3.utils.toWei(feeAmount.toString(), 'ether')})
   }
 
   getBookOptions = () => this.state.bookOptions;

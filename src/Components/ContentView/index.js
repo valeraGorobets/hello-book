@@ -20,7 +20,7 @@ export default class ContentView extends Component {
             <BookSelection clientWalletAddress = {this.props.clientWalletAddress} onBookSelected = {this.onSelected}/>
             <div className="bookView">
                 {this.state.srcHash ?
-                    <img src = {Fake_IPFS_URL + this.state.srcHash} alt=""/>
+                    <img src = {IPFS_URL + this.state.srcHash} alt=""/>
                     : <h2>Not selected</h2>
                 }
             </div>

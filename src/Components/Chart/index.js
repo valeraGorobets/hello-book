@@ -11,7 +11,7 @@ export default  class Chart extends Component {
             data={[
               {type: 'bar', x, y, marker: {color: '#6200ee'}},
             ]}
-            layout={{width: 900, height: 270, title: 'Usage history'}}
+            layout={{width: 1000, height: 270, title: 'Usage history'}}
         />
     );
   }

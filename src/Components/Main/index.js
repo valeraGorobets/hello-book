@@ -9,7 +9,7 @@ export default class Main extends Component {
     clientWalletAddress: '0xc9E4C7e8E2C9055492E3971dD380a359f4Ec4111',
     chart: {
         'Math': 1,
-        'Chemistry': 1,
+        'Chemistry': 10,
         'Hello Book': 3,
     },
   };

@@ -16,3 +16,9 @@ img {
 h2 {
     padding: 10px;
 }
+
+.bookView {
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+}

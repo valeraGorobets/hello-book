@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.19.0",
+    "braces": "^3.0.2",
     "bar-chart-react": "^1.0.2",
     "bigchaindb-driver": "^4.1.0",
     "bigchaindb-orm": "^3.0.3",

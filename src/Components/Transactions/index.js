@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import './styles.css'
-// import web3 from '../../web3';
+import web3 from '../../Utils/web3';
 import { getTransactionHistory } from '../../Services/TransactionsHistoryService';
 
 export default class Transactions extends Component {
   state = {
-    balance: 10,
+    balance: 0,
     transactionHistory: [],
   };
   constructor(props) {
@@ -13,19 +13,18 @@ export default class Transactions extends Component {
 
   }
   componentDidMount = async () => {
-    this.reloadTransactions();
-    // setInterval(this.reloadTransactions, 5000);
-    // const balance = await web3.eth.getBalance(this.props.clientWalletAddress);
-    // this.setState({
-    //     balance: web3.utils.fromWei(balance, 'ether')
-    // });
+    this.reloadAccountInfo();
+    setInterval(this.reloadAccountInfo, 5000);
   };
 
-
-  reloadTransactions = async () => {
+  reloadAccountInfo = async () => {
       const transactionHistory = await getTransactionHistory(this.props.clientWalletAddress);
+      const balance = await web3.eth.getBalance(this.props.clientWalletAddress);
       console.log(transactionHistory);
-      this.setState({transactionHistory});
+      this.setState({
+          balance: web3.utils.fromWei(balance, 'ether'),
+          transactionHistory,
+      });
   };
 
   render() {
@@ -44,7 +43,7 @@ export default class Transactions extends Component {
                             <p>From : {transaction.from || "No address found"}</p>
                             <p>To : {transaction.to || "No address found"}</p>
                         </div>
-                        <p>{transaction.value}</p>
+                        <p>{transaction.value} ETH</p>
                     </div>
                 ))}
             </div>

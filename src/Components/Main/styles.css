@@ -19,6 +19,11 @@ section {
 }
 
 .analyticsData {
-  height: calc(100vh - 230px);
   display: flex;
+}
+.verticalAlign {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: center;
 }

@@ -8,6 +8,10 @@ export default class Transactions extends Component {
     balance: 0,
     transactionHistory: [],
   };
+  constructor(props) {
+      super(props);
+
+  }
   componentDidMount = async () => {
     this.reloadAccountInfo();
     setInterval(this.reloadAccountInfo, 5000);
@@ -26,10 +30,12 @@ export default class Transactions extends Component {
   render() {
     return (
         <div className="transactions">
-            <div className="balance">
-                <h2>Balance: {this.state.balance} ETH</h2>
-            </div>
             <div className="transactions-list">
+                <div className="card">
+                    <p>Time</p>
+                    <p>Transaction info</p>
+                    <p>Value</p>
+                </div>
                 {this.state.transactionHistory.map(transaction => (
                     <div className="card" key={transaction.hash}>
                         <p>{transaction.timeStamp}</p>

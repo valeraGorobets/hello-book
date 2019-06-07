@@ -6,6 +6,13 @@
     padding: 10px;
 }
 
+.wrapper h2 {
+    margin: 10px 30px;
+    padding: 0;
+    font-size: 16px;
+    min-width: 120px;
+}
+
 .css-1pcexqc-container {
     width: 100%;
 }

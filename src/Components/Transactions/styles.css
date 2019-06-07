@@ -1,15 +1,9 @@
 .transactions {
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     margin: 10px;
-    min-height: 100%;
-    width: 60%;
+    height: 100%;
+    width: 100%;
     min-width: 800px;
-}
-.balance {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .card {

@@ -9,9 +9,10 @@ export default class ContentView extends Component {
   state = {
     srcHash: '',
   };
-  onSelected = (srcHash) => {
+  onSelected = (srcHash, selectedBook) => {
     if (srcHash !== this.state.srcHash) {
-        this.setState({srcHash})
+        this.setState({srcHash});
+        this.props.onBookSelected(selectedBook);
     }
   };
   render() {

@@ -55,7 +55,7 @@ export default class BookSelection extends Component {
         .find(item => item.page === this.state.selectedPageOption.value)
         .hash;
 
-    this.props.onBookSelected(hash);
+    this.props.onBookSelected(hash, selectedBook);
     this.sendFeeToAuthor(selectedBook.authorWallet, selectedBook.feeAmount);
   };
 

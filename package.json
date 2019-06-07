@@ -6,6 +6,7 @@
     "axios": "^0.18.0",
     "bar-chart-react": "^1.0.2",
     "bigchaindb-driver": "^4.1.0",
+    "bigchaindb-orm": "^3.0.3",
     "plotly.js": "^1.48.1",
     "plotly.js-dist": "^1.48.1",
     "react": "^16.2.0",

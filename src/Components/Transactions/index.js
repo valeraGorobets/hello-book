@@ -2,17 +2,18 @@ import React, {Component} from 'react';
 import './styles.css'
 // import web3 from '../../web3';
 import { getTransactionHistory } from '../../Services/TransactionsHistoryService';
-import { sendToDb } from '../../Services/BigchindbService';
 
 export default class Transactions extends Component {
   state = {
     balance: 10,
     transactionHistory: [],
   };
+  constructor(props) {
+      super(props);
+
+  }
   componentDidMount = async () => {
     this.reloadTransactions();
-      const retrievedTx = await sendToDb({ city: 'Berlin, DE', temperature: 10, datetime: new Date().toString() });
-      console.log('Transaction', retrievedTx, 'successfully posted.');
     // setInterval(this.reloadTransactions, 5000);
     // const balance = await web3.eth.getBalance(this.props.clientWalletAddress);
     // this.setState({
@@ -30,7 +31,6 @@ export default class Transactions extends Component {
   render() {
     return (
         <div className="transactions">
-
             <div className="transactions-list">
                 <div className="card">
                     <p>Time</p>
